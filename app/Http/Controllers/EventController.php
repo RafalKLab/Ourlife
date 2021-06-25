@@ -102,6 +102,5 @@ class EventController extends Controller
         unlink($image_path);
         $event->delete();
         return redirect()->route('events.get')->with('success', 'Event has been deleted!');
-
     }
 }

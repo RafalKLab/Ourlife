@@ -22,6 +22,10 @@
                             <td>@foreach($item->roles as $role) {{ $role->name }} @endforeach</td>
                             <td>
                                 <a href="{{ url('admin/users/'.$item->id.'/edit') }}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                                <form action="{{route('UserDelete', ['id'=>$item->id])}}" method="POST">
+                                    @csrf
+                                    <input type="submit" class="btn btn-danger my-2" value="Delete">
+                                </form>
                             </td>
                         </tr>
                     @endforeach

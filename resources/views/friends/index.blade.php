@@ -16,7 +16,7 @@
                                     @include('user.partials.userblock')
                                 </div>
                                 <div class="col-sm-8 text-secondary">
-                                    Example text
+
                                 </div>
                             </div>
                         @endforeach

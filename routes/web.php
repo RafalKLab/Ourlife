@@ -78,6 +78,7 @@ Route::group(['middleware' => ['role:Admin']], function () {
     Route::get('/admin/users', [App\Http\Controllers\Admin\UsersController::class, 'index'])->name('Admin.users');
     Route::get('/admin/users/{id}/edit', [App\Http\Controllers\Admin\UsersController::class, 'edit'])->name('Admin.users.edit');
     Route::patch('/admin/users/{id}', [App\Http\Controllers\Admin\UsersController::class, 'update']);
+    Route::post('/admin/users/{id}', [App\Http\Controllers\Admin\UsersController::class, 'destroy'])->name('UserDelete');
     //roles controll
     Route::get('/admin/roles', [App\Http\Controllers\Admin\RolesController::class, 'index'])->name('Admin.roles');
     Route::get('/admin/roles/create', [App\Http\Controllers\Admin\RolesController::class, 'create'])->name('Admin.roles.create');
